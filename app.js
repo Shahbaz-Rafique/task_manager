@@ -15,6 +15,8 @@ var addtaskRouter = require('./routes/addtask');
 var getTasksRouter = require('./routes/getTasks');
 var changeStatusRouter = require('./routes/changeStatus');
 var getPositionsRouter = require('./routes/getPositions');
+var deleteTaskRouter = require('./routes/deletetask');
+var updatetaskRouter = require('./routes/updateTask');
 
 var app = express();
 app.use(cors());
@@ -44,6 +46,8 @@ app.use('/api/v1/addtask', addtaskRouter);
 app.use('/api/v1/gettasks', getTasksRouter);
 app.use('/api/v1/changestatus', changeStatusRouter);
 app.use('/api/v1/getPositions', getPositionsRouter);
+app.use('/api/v1/deletetask', deleteTaskRouter);
+app.use('/api/v1/updatetask', updatetaskRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
